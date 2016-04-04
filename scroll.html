@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>Javascript Demo</title>
+	<style>
+		body {
+			background-color: aqua;
+			font-family: monospace;
+			color: teal;
+			font-size:30px;
+			text-align: center;
+			margin-top:20px;
+		}
+
+		#magic{
+			color: teal;
+			border-right: 3px solid white;
+			padding-right: 7px;
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+	Inspirational Quotes:<hr>
+	<div id="magic"></div>
+
+	<script>
+
+		var words = ["Passion never fails", "Believe in yourself", "Every accomplishment starts with the decision to try", "It won't be easy but it will be worth it", "Pissed off for greatness", "Our greatest weakness lies in giving up"],
+			el = document.getElementById('magic'),
+			word_counter = 0,
+			character_counter = 0;
+
+		function updateText()
+		{
+			
+			if( words[word_counter][character_counter] != " "){
+				el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
+			}
+			else{
+				el.innerHTML = el.innerHTML + "&nbsp";
+				character_counter++;
+			}
+			if(character_counter == words[word_counter].length+1) //words[word_counter].length will only go through the last character and not display the last one.
+			{
+				word_counter++; 	//choose a different word
+				character_counter = 0;	//start over with the first character of the word
+				el.innerHTML = '';  //set the html to be blank
+
+				//if we're displaying the last word, go back to the first word
+				if(word_counter == words.length)
+					word_counter = 0;
+			}
+		}
+
+		setInterval(updateText,150);
+
+	</script>
+
+</body>
+
+</html>
