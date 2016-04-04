@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS Fundamentals Part 1</title>
+	<script type="text/javascript">
+		// 1.Create a program that goes through each value in array x, where x is [3,5,'Dojo', 'rocks', 'Michael', 'Sensei']. Have it log each value of the array.
+		var x = [3, 5, 'Dojo', 'rocks', 'Michael', 'Sensei'];
+		for (var i = 0; i < x.length+1; i++){
+				console.log(x[i]);
+		}
+		// 2.Add a new value in the array x using a push method. New value you should add is 100.
+		x.push(100);
+		console.log(x);
+		// 3.Add a new set of array to variable x. Log x in the console and analyze how x looks now.
+		x.push(["Hello", "World", 10, 11, "awesome"]);
+		console.log(x);
+		// 4.Create a simple for loop that sums all the numbers between 1 to 500. Have console log the final sum.
+		var sum = 0;
+		for (var i = 1; i < 501; i++){
+			sum += i;
+		}
+		console.log(sum);
+		// 5.Write a loop that will go through the array [1, 5, 90, 25, -3, 0], find the minimum value, and then print it
+		var arr = [1, 5, 90, 25, -3, 0];
+		var min = 0;
+		for (var i = 0; i < arr.length+1; i++){
+			if (arr[i] < min){
+				min = arr[i];
+			}
+		}
+		console.log(min);
+		document.write(min);
+		// 6.Write a loop that will go through the array [1, 5, 90, 25, -3, 0], find the average of all of the values, and then print it
+		var arr = [1, 5, 90, 25, -3, 0];
+		var sum2 = 0;
+		for (var i = 0; i < arr.length+1; i++){
+			sum2 += arr[i];
+		}
+		console.log(sum2/arr.length+1);
+		document.write(sum2/arr.length+1);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
